@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp">
+
+    <!-- TODO: edit this file as you want-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintRight_toLeftOf="@id/imageView"
+        app:layout_constraintLeft_toRightOf="@id/rootNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/rootNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintLeft_toRightOf="@id/progressBar"
+        app:layout_constraintRight_toLeftOf="@id/description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/lastModified"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="TextView"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/imageView"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--         />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/Created"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="TextView"-->
+    <!--        app:layout_constraintRight_toLeftOf="@id/lastModified"-->
+    <!--        app:layout_constraintLeft_toRightOf="@id/description"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
