@@ -9,12 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RootViewHolder extends RecyclerView.ViewHolder {
+    ProgressBar progressBar;
+    TextView result;
+    TextView rootNumber;
+    ImageView delete;
+
     public RootViewHolder(@NonNull View itemView) {
         super(itemView);
-        ProgressBar progressBar = itemView.findViewById(R.id.progressBar);
-        TextView result = itemView.findViewById(R.id.description);
-        TextView rootNumber = itemView.findViewById(R.id.rootNumber);
-        ImageView delete = itemView.findViewById(R.id.imageView);
+        progressBar = itemView.findViewById(R.id.progressBar);
+        result = itemView.findViewById(R.id.description);
+        rootNumber = itemView.findViewById(R.id.rootNumber);
+        delete = itemView.findViewById(R.id.imageView);
 
     }
 }

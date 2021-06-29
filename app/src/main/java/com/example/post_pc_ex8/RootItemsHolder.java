@@ -2,6 +2,7 @@ package com.example.post_pc_ex8;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.UUID;
 
 public interface RootItemsHolder extends Serializable {
 
@@ -12,17 +13,16 @@ public interface RootItemsHolder extends Serializable {
      * Creates a new TodoItem and adds it to the list, with the @param description and status=IN-PROGRESS
      * Subsequent calls to [getCurrentItems()] should have this new TodoItem in the list
      */
-    void addNewInProgressItem(String description);
+    int addNewInProgressItem(RootItem rootItem);
 
     /** mark the @param item as DONE */
-    void markItemDone(RootItem item);
-
-    /** mark the @param item as IN-PROGRESS */
-    void markItemInProgress(RootItem item);
+    int markItemDone(UUID id);
 
     /** delete the @param item */
     void deleteItem(RootItem item);
 
     int itemIndex(RootItem item);
+
+    int itemPosByID(UUID id);
 
 }

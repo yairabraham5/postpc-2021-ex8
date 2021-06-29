@@ -2,9 +2,9 @@ package com.example.post_pc_ex8;
 
 import java.util.UUID;
 
-public class RootItem {
+public class RootItem implements Comparable<RootItem>{
 
-    long number;
+    Long number;
     UUID id;
     int rootProgress;
     long firstRoot;
@@ -12,7 +12,7 @@ public class RootItem {
     boolean done = false;
     long sqrtOfNum;
 
-    public RootItem(long numberToCalc, UUID rootId){
+    public RootItem(Long numberToCalc, UUID rootId){
         this.number = numberToCalc;
         this.id = rootId;
         this.rootProgress = 0;
@@ -45,4 +45,18 @@ public class RootItem {
         return done;
     }
 
+    public UUID getId() {
+        return id;
+    }
+
+    @Override
+    public int compareTo(RootItem o) {
+        if (this.done && !o.done) {
+            return 1;
+        }
+        if(!this.done && o.done){
+            return -1;
+        }
+        return this.number.compareTo(o.number);
+    }
 }
